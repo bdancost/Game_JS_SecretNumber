@@ -40,6 +40,12 @@ function verificarChute() {
   }
 }
 
+document.querySelector(".container__input").addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    verificarChute();
+  }
+});
+
 function gerarNumeroAleatorio() {
   let numeroEscolhido = parseInt(Math.random() * nuemroLimite + 1);
   let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
